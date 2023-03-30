@@ -16,12 +16,13 @@ class UserController{
                 otp=otp+r
             }
 
-            let info = transporter.sendMail({
+            let info = await transporter.sendMail({
                 from : "Chit-Chat",
                 to:  email,
                 subject: "Your OTP to register",
                 html: `<h1>Your OTP is ${otp}.  </h1>`
             })
+            
             res.status(200).send({"otp":otp, "email":email, "password":password, "name":name})
             
           
