@@ -17,7 +17,7 @@ class UserController{
             }
 
             let info = transporter.sendMail({
-                from : process.env.EMAIL_USER,
+                from : "Chit-Chat",
                 to:  email,
                 subject: "Your OTP to register",
                 html: `<h1>Your OTP is ${otp}.  </h1>`
