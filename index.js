@@ -5,9 +5,7 @@ import web from './routes/web.js'
 import connectDB from './db/connectmongo.js'
 dotenv.config()
 const app = express()
-app.use(cors({
-    origin:["http://127.0.0.1:3000/", "https://whatsappbac.vercel.app/"]
-}))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
