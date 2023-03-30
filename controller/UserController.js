@@ -2,6 +2,8 @@ import bcrypt from 'bcrypt'
 import transporter from '../config/emailconfig.js'
 import messageModel from '../model/messagemodel.js'
 import userModel from '../model/usersmodel.js'
+import dotenv from 'dotenv'
+dotenv.config()
 
 class UserController{
     static register=async (req, res)=>{
